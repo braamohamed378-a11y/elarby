@@ -17,8 +17,6 @@ export const Route = createFileRoute("/")({
         content: "كل حدوته حلوة بتبدأ بحاجة حلوة من چيلاتى العربي. اطلب دليفرى دلوقتي.",
       },
       { property: "og:url", content: "/" },
-",
-      },
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "/" }],
