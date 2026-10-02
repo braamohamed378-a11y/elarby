@@ -160,7 +160,7 @@ function Index() {
       {/* Flavors */}
       <section className="px-5 py-8">
         <h2 className="font-display mb-4 text-3xl font-extrabold text-balance">
-          النكهات
+          الأصناف المميزة
         </h2>
         <div className="grid grid-cols-2 gap-3">
           {FLAVORS.map((flavor) => (
@@ -172,8 +172,43 @@ function Index() {
               <span className="floaty inline-block text-3xl">{flavor.emoji}</span>
               <p className="font-display mt-2 text-lg font-extrabold">{flavor.name}</p>
               <p className="font-mono mt-1 text-sm opacity-80">{flavor.price}</p>
+              <p className="mt-2 text-[11px] leading-snug opacity-70">{flavor.note}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Menu */}
+      <section className="px-5 pb-8">
+        <div className="mb-4 flex items-end justify-between">
+          <h2 className="font-display text-3xl font-extrabold text-balance">
+            المنيو الكامل
+          </h2>
+          <span className="font-mono text-xs text-muted-foreground">
+            الأسعار بالجنيه
+          </span>
+        </div>
+        <div className="space-y-4">
+          <div className="anim-up overflow-hidden rounded-[2rem] ring-1 ring-foreground/5">
+            <img
+              src={menu1.url}
+              alt="منيو چيلاتي العربي — أزر باللبن، أرب كريم، الكشري، الزبادو، القشطوة"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
+          <div className="anim-up overflow-hidden rounded-[2rem] ring-1 ring-foreground/5">
+            <img
+              src={menu2.url}
+              alt="منيو چيلاتي العربي — أصلين، برام، الإضافات، الحلويات، الديناميت"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
         </div>
       </section>
 
