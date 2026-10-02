@@ -1,16 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroGelato from "@/assets/hero-gelato.jpg";
+import menu1 from "@/assets/menu-1.jpg.asset.json";
+import menu2 from "@/assets/menu-2.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
       { title: "چيلاتى العربى — أحلى چيلاتي في إسكندرية" },
-      {
-        name: "description",
-        content:
-          "چيلاتى العربى — أحلى چيلاتي اسكندراني بكل النكهات: فستق، مانجا، فراولة، أرز بلبن، أم علي وكسكسي. دليفرى من فرع الساعة أو سيدى بشر.",
-      },
+        {
+          name: "description",
+          content:
+            "چيلاتى العربى — منيو كامل بالأسعار: أصلين، برام، كشري نوتيلا، زبادو، قشطوطة، قنبلة العربي وأرز بلبن. دليفرى من فرع الساعة أو سيدى بشر.",
+        },
       { property: "og:title", content: "چيلاتى العربى — أحلى چيلاتي في إسكندرية" },
       {
         property: "og:description",
@@ -25,30 +27,34 @@ export const Route = createFileRoute("/")({
 
 const FLAVORS = [
   {
-    emoji: "🍓",
-    name: "فراولة طازة",
-    price: "٣٥ ج.م",
+    emoji: "💥",
+    name: "قنبلة العربي",
+    price: "٥٠ ج.م",
+    note: "أزر بلبن + مانجو + فاكهة + قشطة + ايس كريم + عسل",
     card: "bg-primary text-primary-foreground",
     delay: "0ms",
   },
   {
-    emoji: "🥜",
-    name: "فستق مريم",
-    price: "٤٠ ج.م",
-    card: "bg-mint text-mint-foreground",
+    emoji: "🍯",
+    name: "أصلين بالسمنة البلدى",
+    price: "٢٥ ج.م",
+    note: "أو برام بـ ٣٠ ج.م",
+    card: "bg-sun text-sun-foreground",
     delay: "60ms",
   },
   {
-    emoji: "🥭",
-    name: "مانجا إسكندران",
-    price: "٤٥ ج.م",
-    card: "bg-sun text-sun-foreground",
+    emoji: "🥛",
+    name: "أزر بلبن جامبو",
+    price: "٣٠ ج.م",
+    note: "سادة أو بأي إضافة",
+    card: "bg-mint text-mint-foreground",
     delay: "120ms",
   },
   {
     emoji: "🍫",
-    name: "شوكولاتة غامق",
-    price: "٤٠ ج.م",
+    name: "كشري نوتيلا",
+    price: "٥٥ ج.م",
+    note: "لوتس · أوريو · مانجو · فواكه · بستاشيو",
     card: "bg-foreground text-background",
     delay: "180ms",
   },
@@ -146,15 +152,15 @@ function Index() {
       {/* Flavor marquee */}
       <div className="my-2 -rotate-1 overflow-hidden bg-primary py-3">
         <div className="marquee-track font-display flex w-[200%] gap-8 text-xl font-extrabold whitespace-nowrap text-primary-foreground">
-          <span>فستق ✦ مانجا ✦ شوكولاتة ✦ فراولة ✦ أرز بلبن ✦ أم علي ✦ كسكسي ✦</span>
-          <span>فستق ✦ مانجا ✦ شوكولاتة ✦ فراولة ✦ أرز بلبن ✦ أم علي ✦ كسكسي ✦</span>
+          <span>أصلين ✦ برام ✦ كشري ✦ زبادو ✦ قشطوطة ✦ قنبلة العربي ✦ أرز بلبن ✦</span>
+          <span>أصلين ✦ برام ✦ كشري ✦ زبادو ✦ قشطوطة ✦ قنبلة العربي ✦ أرز بلبن ✦</span>
         </div>
       </div>
 
       {/* Flavors */}
       <section className="px-5 py-8">
         <h2 className="font-display mb-4 text-3xl font-extrabold text-balance">
-          النكهات
+          الأصناف المميزة
         </h2>
         <div className="grid grid-cols-2 gap-3">
           {FLAVORS.map((flavor) => (
@@ -166,8 +172,43 @@ function Index() {
               <span className="floaty inline-block text-3xl">{flavor.emoji}</span>
               <p className="font-display mt-2 text-lg font-extrabold">{flavor.name}</p>
               <p className="font-mono mt-1 text-sm opacity-80">{flavor.price}</p>
+              <p className="mt-2 text-[11px] leading-snug opacity-70">{flavor.note}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Menu */}
+      <section className="px-5 pb-8">
+        <div className="mb-4 flex items-end justify-between">
+          <h2 className="font-display text-3xl font-extrabold text-balance">
+            المنيو الكامل
+          </h2>
+          <span className="font-mono text-xs text-muted-foreground">
+            الأسعار بالجنيه
+          </span>
+        </div>
+        <div className="space-y-4">
+          <div className="anim-up overflow-hidden rounded-[2rem] ring-1 ring-foreground/5">
+            <img
+              src={menu1.url}
+              alt="منيو چيلاتي العربي — أزر باللبن، أرب كريم، الكشري، الزبادو، القشطوة"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
+          <div className="anim-up overflow-hidden rounded-[2rem] ring-1 ring-foreground/5">
+            <img
+              src={menu2.url}
+              alt="منيو چيلاتي العربي — أصلين، برام، الإضافات، الحلويات، الديناميت"
+              width={1200}
+              height={1200}
+              loading="lazy"
+              className="w-full"
+            />
+          </div>
         </div>
       </section>
 
