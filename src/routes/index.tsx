@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroGelato from "@/assets/hero-gelato.jpg";
+import menu1 from "@/assets/menu-1.jpg.asset.json";
+import menu2 from "@/assets/menu-2.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,30 +27,34 @@ export const Route = createFileRoute("/")({
 
 const FLAVORS = [
   {
-    emoji: "🍓",
-    name: "فراولة طازة",
-    price: "٣٥ ج.م",
+    emoji: "💥",
+    name: "قنبلة العربي",
+    price: "٥٠ ج.م",
+    note: "أزر بلبن + مانجو + فاكهة + قشطة + ايس كريم + عسل",
     card: "bg-primary text-primary-foreground",
     delay: "0ms",
   },
   {
-    emoji: "🥜",
-    name: "فستق مريم",
-    price: "٤٠ ج.م",
-    card: "bg-mint text-mint-foreground",
+    emoji: "🍯",
+    name: "أصلين بالسمنة البلدى",
+    price: "٢٥ ج.م",
+    note: "أو برام بـ ٣٠ ج.م",
+    card: "bg-sun text-sun-foreground",
     delay: "60ms",
   },
   {
-    emoji: "🥭",
-    name: "مانجا إسكندران",
-    price: "٤٥ ج.م",
-    card: "bg-sun text-sun-foreground",
+    emoji: "🥛",
+    name: "أزر بلبن جامبو",
+    price: "٣٠ ج.م",
+    note: "سادة أو بأي إضافة",
+    card: "bg-mint text-mint-foreground",
     delay: "120ms",
   },
   {
     emoji: "🍫",
-    name: "شوكولاتة غامق",
-    price: "٤٠ ج.م",
+    name: "كشري نوتيلا",
+    price: "٥٥ ج.م",
+    note: "لوتس · أوريو · مانجو · فواكه · بستاشيو",
     card: "bg-foreground text-background",
     delay: "180ms",
   },
