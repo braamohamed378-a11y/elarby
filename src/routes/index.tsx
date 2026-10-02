@@ -152,8 +152,8 @@ function Index() {
       {/* Flavor marquee */}
       <div className="my-2 -rotate-1 overflow-hidden bg-primary py-3">
         <div className="marquee-track font-display flex w-[200%] gap-8 text-xl font-extrabold whitespace-nowrap text-primary-foreground">
-          <span>فستق ✦ مانجا ✦ شوكولاتة ✦ فراولة ✦ أرز بلبن ✦ أم علي ✦ كسكسي ✦</span>
-          <span>فستق ✦ مانجا ✦ شوكولاتة ✦ فراولة ✦ أرز بلبن ✦ أم علي ✦ كسكسي ✦</span>
+          <span>أصلين ✦ برام ✦ كشري ✦ زبادو ✦ قشطوطة ✦ قنبلة العربي ✦ أرز بلبن ✦</span>
+          <span>أصلين ✦ برام ✦ كشري ✦ زبادو ✦ قشطوطة ✦ قنبلة العربي ✦ أرز بلبن ✦</span>
         </div>
       </div>
 
