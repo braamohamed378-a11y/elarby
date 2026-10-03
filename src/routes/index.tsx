@@ -62,7 +62,7 @@ const FLAVORS = [
 
 const BRANCHES = [
   {
-    name: "الرميل ٢ · جميلة بوحريد",
+    name: "الرمل شارع الترعه · الساعه ",
     hours: "١٠ ص – ٣ ص · يوميًا",
     badge: "مفتوح",
     badgeClass: "bg-mint text-mint-foreground",
